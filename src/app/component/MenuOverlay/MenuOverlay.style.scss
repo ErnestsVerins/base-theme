@@ -289,6 +289,12 @@
 
             &_banner {
                 margin-top: 1rem;
+
+                > [class$='NoImage'] {
+                    background-color: var(--menu-overlay-item-figure-background);
+                    grid-column: unset;
+                    min-height: 6.1rem;
+                }
             }
         }
     }
@@ -394,6 +400,19 @@
 
         &::before {
             content: none;
+        }
+    }
+
+    &-NoImage {
+        min-height: 3.2rem;
+        grid-column: 2;
+
+        + figcaption {
+            color: $black;
+
+            &:hover {
+                color: var(--menu-overlay-item-hover-color);
+            }
         }
     }
 }
